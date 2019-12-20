@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int EventosUSB = 0;
-unsigned int SystemTicks = 0;
+s32 EventosUSB = 0;
+u32 SystemTicks = 0;
 
 
 void USBRead ( void ) {
@@ -36,8 +36,8 @@ void LedOFF ( int led ) {
 
 int Lecturas ( void ) {
 	
-	static int st = 0;
-	static int nled=0;
+	static u32 st = 0;
+	static u32 nled=0;
 	
 	switch ( EventoUSB ) {
 		case 0:  //none	
